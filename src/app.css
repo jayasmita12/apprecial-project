@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		font-family: 'Satoshi', sans-serif;
+	}
+}
+
+@layer components {
+	.box {
+		@apply rounded-2xl border-2 border-base-200 text-center grid place-items-center;
+	}
+	.product-icon {
+		@apply h-[7.625rem] w-[7.625rem] rounded-full bg-primary grid place-items-center;
+	}
+
+	.tabactive {
+		@apply text-primary-content underline underline-offset-8 decoration-[3px] decoration-primary-content;
+	}
+}
+
+.card-shadow {
+	box-shadow: 0px 4px 51px 4px rgba(0, 0, 0, 0.08);
+}
+[data-theme='dark'] .card-shadow {
+	box-shadow: 0px 4px 70px 4px rgba(255, 255, 255, 0.08);
+}
+.timeline-hr{
+	background-color: #F87272;
+	opacity: 0.1;
+}
+[data-theme="dark"] .timeline-hr{
+	background-color: #BB6A37;
+	opacity:0.3
+}
+
+.timeline-shadow {
+	box-shadow: 0px 4px 61px rgba(0, 0, 0, 0.06);
+}
+[data-theme='dark'] .timeline-shadow {
+	box-shadow: 0px 4px 100px 4px rgba(255, 255, 255, 0.08);
+}
+
+.light-img {
+	display: block;
+}
+[data-theme='dark'] .light-img {
+	display: none;
+}
+.dark-img {
+	display: none;
+}
+[data-theme='dark'] .dark-img {
+	display: block;
+}
